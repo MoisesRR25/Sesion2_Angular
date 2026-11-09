@@ -33,7 +33,10 @@ private estudianteService = inject(EstudianteService);
   }
 
   eliminar(id: number) {
+    //Primera Modificacion
+    if(confirm('¿Seguro que quieres estudiar este estudiante?')){
     this.estudianteService.eliminarEstudiante(id);
+  }
   }
 
   limpiarFormulario() {
