@@ -17,6 +17,8 @@
 
   <section class="contenido">
     <h2>Lista de Estudiantes</h2>
+    //Modificacion 2
+    <p><strong>Total de Estudianes:</strong> {{ estudiantes.length }}</p>
     @if (estudiantes.length > 0) {
       @for (estudiante of estudiantes; track estudiante.id) {
         <div class="tarjeta-estudiante" [class.editando]="estudiante.id === idEditando">
