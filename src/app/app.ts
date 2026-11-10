@@ -34,7 +34,7 @@ private estudianteService = inject(EstudianteService);
 }
 
   eliminar(id: number) {
-    //Primera Modificacion
+    //Modificacion 1
     if(confirm('¿Seguro que quieres estudiar este estudiante?')){
     this.estudianteService.eliminarEstudiante(id);
   }
