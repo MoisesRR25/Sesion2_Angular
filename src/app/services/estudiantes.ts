@@ -30,4 +30,8 @@ export class EstudianteService {
       this.estudiantes.splice(index, 1);
     }
   }
+
+  limpiarEstudiantes(): void {
+  this.estudiantes.splice(0, this.estudiantes.length);
+}
 }

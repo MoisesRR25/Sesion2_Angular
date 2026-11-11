@@ -31,7 +31,7 @@ private estudianteService = inject(EstudianteService);
   seleccionarParaEditar(estudiante: Estudiante) {
   this.nuevoEstudiante = { ...estudiante };
   this.idEditando = estudiante.id;
-}
+  }
 
   eliminar(id: number) {
     //Modificacion 1
@@ -43,5 +43,12 @@ private estudianteService = inject(EstudianteService);
   limpiarFormulario() {
   this.nuevoEstudiante = { id: 0, nombre: '', correo: '', carrera: '', telefono: '' };
   this.idEditando = null;
+  }
+  //modificacion 6
+  limpiarLista() {
+  if (confirm('estas seguro que quieres borrar toda la lista de estudiantes?')) {
+    this.estudianteService.limpiarEstudiantes();
+    this.limpiarFormulario();
+  }
 }
 }
